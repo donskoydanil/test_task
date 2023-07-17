@@ -1,10 +1,8 @@
-from pathlib import Path 
 from pydantic_settings import BaseSettings, SettingsConfigDict
+from services_settings import BASE_DIRECTORY
 
 
 
-
-BASE_DIRECTORY = Path(__file__).absolute().parent.parent
 
 
 class ServicesDownloadSettings(BaseSettings):
