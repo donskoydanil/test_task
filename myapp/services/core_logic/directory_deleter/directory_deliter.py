@@ -1,11 +1,11 @@
 import os
 import shutil
 from typing import Iterable
-from interface_directory_deliter import IDirectoryDeliter
+from myapp.services.core_logic.directory_deleter.interface_directory_deliter import IDirectoryDeleter
 from myapp.services.core_logic.pathmanager.interface_path_manager import IPathManager 
 
 
-class DirectoryDeleter(IDirectoryDeliter):
+class DirectoryDeleter(IDirectoryDeleter):
 
     def __init__(self,path_manager : IPathManager ) -> None:
         self.path_manager = path_manager
