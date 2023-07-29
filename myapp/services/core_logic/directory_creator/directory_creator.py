@@ -1,4 +1,3 @@
-import pathlib
 from typing import Iterable
 from myapp.services.core_logic.directory_creator.interface_directory_creator import IDirectoryCreator
 from myapp.services.core_logic.pathmanager.interface_path_manager import IPathManager 
