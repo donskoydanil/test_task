@@ -1,4 +1,5 @@
-from typing import Self
+from typing import Self, Dict,Type
+from myapp.domain.files.file import File
 
 
 class Container:
@@ -12,6 +13,6 @@ class Container:
         return cls._instance
 
     @property
-    def memory(self):
+    def memory(self) -> Dict[str,Type[File]]:
         return self.__memory
     
