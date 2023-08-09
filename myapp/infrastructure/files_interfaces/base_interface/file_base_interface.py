@@ -1,6 +1,6 @@
 from typing import Type,Optional
 from myapp.infrastructure.container_interfaces.get_interface.container_get_interface import ContainerGetInterface
-
+from myapp.domain.files.file import File
 
 class FileBaseInterface:
 
@@ -11,7 +11,14 @@ class FileBaseInterface:
         if container_get_interface is None:
             container_get_interface = ContainerGetInterface()
 
-        self.get_interface = container_get_interface
-        self.id = id
+        self.file_instance = self._get_file_instance(id,container_get_interface)
+
+
+    def _get_file_instance(self,id: str, 
+                 container_get_interface: Optional[Type[ContainerGetInterface]] 
+                 ) -> Type[File] :
+        return container_get_interface.get(id)
+
+
 
         
