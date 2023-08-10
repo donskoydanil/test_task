@@ -1,5 +1,4 @@
-from typing import Any, Type
-from myapp.domain.files.file import File
+from typing import Any
 from myapp.domain.files.files_descriptors.base_descriptor.base_file_descriptor import FileBaseDescriptor
 
 
@@ -14,7 +13,7 @@ class FileStatusDescriptor(FileBaseDescriptor):
         self.attribute_value = attribute_value
         self.status_flag = status_flag
 
-    def __set__(self, instance: Type[File], value: Any) -> None: 
+    def __set__(self, instance, value: Any) -> None: 
         if value == self.status_flag:
             instance.__dict__[self.attribute_to_change] = self.attribute_value
         super().__set__(instance, value)
