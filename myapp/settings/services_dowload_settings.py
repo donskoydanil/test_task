@@ -11,5 +11,4 @@ class ServicesDownloadSettings(BaseSettings):
     url : str
 
 
-services_download_settings = ServicesDownloadSettings(_secrets_dir= BASE_DIRECTORY / "secrets") 
-
+services_download_settings = ServicesDownloadSettings() 
