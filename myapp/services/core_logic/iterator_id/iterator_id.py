@@ -1,4 +1,4 @@
-from iteration_logic.base_logic_parts import BaseIteratorLogic
+from .iteration_logic.base_logic_parts import BaseIteratorLogic
 
 
 class IteratorId:

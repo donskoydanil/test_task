@@ -1,5 +1,5 @@
 from typing import Type,Optional
-from base_logic_parts import IAttributeManager
+from .base_logic_parts import IAttributeManager
 from myapp.settings.service_id_settings import SettingsId
 
 

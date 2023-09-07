@@ -1,5 +1,5 @@
-from base_logic_parts import BaseIteratorLogic
-from attribute_manager import AttributeManager
+from .base_logic_parts import BaseIteratorLogic
+from .attribute_manager import AttributeManager
 
 class IteratorLogic(BaseIteratorLogic,AttributeManager):
 
