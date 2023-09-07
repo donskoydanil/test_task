@@ -1,4 +1,4 @@
-from myapp.services.core_logic.iterator_logic.iterator_logic_interface import BaseIteratorLogic
+from iteration_logic.base_logic_parts import BaseIteratorLogic
 
 
 class IteratorId:
