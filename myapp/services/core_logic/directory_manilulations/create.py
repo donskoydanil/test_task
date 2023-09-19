@@ -1,5 +1,5 @@
 from typing import Iterable
-from base import IDirectoryCreator
+from  myapp.services.core_logic.directory_manilulations.base import IDirectoryCreator
 from myapp.services.core_logic.pathmanager.interface_path_manager import IPathManager 
 
 

@@ -2,7 +2,7 @@ import aiohttp
 import pathlib
 from myapp.services.core_logic.download.base_download import IDownloader
 from myapp.services.core_logic.download.download_with_procents import DownloadWithProcents
-
+import asyncio
 
 
 class DownloadByLink(IDownloader):
@@ -13,13 +13,15 @@ class DownloadByLink(IDownloader):
 
     
     async def _create_get_request(self,url: str) -> aiohttp.ClientResponse:
-        out_response = await self.session.get(url)
+        
+        out_response = await self.session.make_session.get(url)
         return out_response
     
     
     async def download(self, url: str,path:pathlib.Path) -> None:
 
         response = await self._create_get_request(url)
+        
         path_to_download = path
 
         async with response:

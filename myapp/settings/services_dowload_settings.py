@@ -1,5 +1,5 @@
 from pydantic_settings import BaseSettings, SettingsConfigDict
-from services_settings import BASE_DIRECTORY
+from myapp.settings.services_settings import BASE_DIRECTORY
 
 
 
